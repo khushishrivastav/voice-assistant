@@ -41,10 +41,11 @@ app.get('/open-msexcel',(req,res)=>
  res.send("excel opened");
 });
 
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname,'Front-End')));
 app.listen(3000, ()=>
 {
  console.log("server runing");
 
 
 });
+
