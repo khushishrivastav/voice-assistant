@@ -8,7 +8,7 @@ const app= express();
 
 app.get('/',(req,res)=>
 {
- res.sendFile(__dirname+"/Front-End/page1.html");
+ res.sendFile(path.join(__dirname, 'Front-End/page1.html'));
 });
 
 app.get('/open-notepad',(req,res)=>
@@ -48,4 +48,5 @@ app.listen(3000, ()=>
 
 
 });
+
 
