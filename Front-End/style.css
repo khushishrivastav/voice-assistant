@@ -1,0 +1,45 @@
+.container{
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 20px;
+    padding: 40px;
+    color: white;
+    position: absolute;   /* body ke respect me */
+    top: 30%;             /* vertical center */
+    left: 35%;            /* horizontal center */
+}
+body{
+    display: flex;
+    background-image: url('ai.image.png');
+    
+
+    background-size: cover;   /* image ko poore screen pe fit karega */
+  background-position: center; /* image ko center me rakhega */
+  background-repeat: no-repeat; /* image ko repeat hone se rokega */
+  height: 100vh; /* pura screen ki height lega */
+  margin: 0; /* extra margin hatane ke liye */
+  } 
+
+  .container1{
+    
+    background-color:#2a5298;
+    padding: 40px;
+  width: 200px;       /* left box ko width do */
+  height: 550px;      /* height fix kar do */
+    color: white;
+    position: absolute;   /* body ke respect me */
+     
+}
+  
+ #speechtotext
+
+ {
+    display: none;
+     color:black;
+     background-color: white;
+     
+ } 
+  #cleartext {
+     display: none;
+     
+    
+  }
