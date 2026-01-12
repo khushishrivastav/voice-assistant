@@ -8,7 +8,7 @@ const app= express();
 
 app.get('/',(req,res)=>
 {
- res.send("welcome to khushi shrivastav's Voice AI assistant");
+ res.sendFile(__dirname+"/Front-End/page1.html");
 });
 
 app.get('/open-notepad',(req,res)=>
@@ -45,5 +45,6 @@ app.use(express.static(path.join(__dirname)));
 app.listen(3000, ()=>
 {
  console.log("server runing");
+
 
 });
