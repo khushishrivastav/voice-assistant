@@ -5,7 +5,7 @@
     color: white;
     position: absolute;   /* body ke respect me */
     top: 30%;             /* vertical center */
-    left: 35%;            /* horizontal center */
+    left: 30%;            /* horizontal center */
 }
 body{
     display: flex;
@@ -42,4 +42,10 @@ body{
      display: none;
      
     
+
   }
+#voice
+{
+ width:150px;
+ display:none;
+}
