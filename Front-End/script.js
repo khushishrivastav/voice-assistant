@@ -4,14 +4,23 @@ recognition.lang="en-US";
 //const x = require('child_process');
  
 let btn= document.getElementById("btn");
+let voice=document.getElementById("voice");
 btn.addEventListener("click",()=>
-{
-    function speak(text) {
-        const abc = new SpeechSynthesisUtterance(text); //convert text to speech
-        window.speechSynthesis.speak(abc); //speak the text
-      }
+{function speak(text) {
+  const abc = new SpeechSynthesisUtterance(text);
+
+  abc.lang="hi-GB";
+  abc.volume=1;
+  abc.pitch = 1;
+  abc.rate = 1;
+
+  window.speechSynthesis.speak(abc);
+}
+
       function handleCommands(command)
       {
+       btn.style.display="flex";
+       voice.style.display="none";
         if(command.includes("how r u ?"))
         { speak("i'm fine ..what about uh ?");}
         if(command.includes("what r u doing"))
@@ -72,32 +81,35 @@ btn.addEventListener("click",()=>
           fetch("http://localhost:3000/open-msexcel");
           
         }
-        else if(commands.includes("open calculator"))
+        else if(command.includes("open calculator"))
         {
           speak("opening calculator");
            setTimeout(()=>{ alert(" wait calculator is opening");}, 2000);
           fetch("http://localhost:3000/open-cal");
           
         }
-        else if(commands.includes("open"))
-       {
-        let app= command.replace("open","")
-                 .replace("can you","")
-                 .replace("please","")
-                 .trim();
-         setTimeout(()=>{ alert(" wait ${app} is opening");}, 2000);
-          fetch("http://localhost:3000/open?app=${appName}");
-        });
-        else if(commands.includes("open"))
-       { speak("sorry i can only open notepad , Mspaint , Excel, MSword, whatsapp, instagram, youtube , facebook and calulator ");}
-      }
+      //  else if(commands.includes("open"))
+       //{
+       // let app= command.replace("open","")
+       //          .replace("can you","")
+        //         .replace("please","")
+        //         .trim();
+      //   setTimeout(()=>{ alert(" wait ${app} is opening");}, 2000);
+       //   fetch("http://localhost:3000/open?app=${appName}");
+      //  }
+       // else if(command.includes("open"))
+    //   { speak("sorry i can only open notepad , Mspaint , Excel, MSword, whatsapp, instagram, youtube , facebook and calulator ");}
+      
        else 
-       { speak("sorry i have not understand please speak again ");}
-      }
-
+       { speak(`this is what i found on internet regarding ${command}`);
+         window.open(`https://www.google.com/search?q=${command}`);
+} }
+      
       speak("how can i help you");
       setTimeout(() => {
         recognition.start();
+         btn.style.display="none";
+         voice.style.display="block";
       }, 2000);
       
             
