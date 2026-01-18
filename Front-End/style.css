@@ -4,9 +4,8 @@
     padding: 40px;
     color: white;
     position: absolute;   /* body ke respect me */
-    top: 30%;             /* vertical center */
-    left: 30%;            /* horizontal center */
-}
+    }
+
 body{
     display: flex;
     background-image: url('ai.image.png');
@@ -17,9 +16,13 @@ body{
   background-repeat: no-repeat; /* image ko repeat hone se rokega */
   height: 100vh; /* pura screen ki height lega */
   margin: 0; /* extra margin hatane ke liye */
+
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+
   } 
 
-  .container1{
+ .container1{
     
     background-color:#2a5298;
     padding: 40px;
@@ -28,22 +31,15 @@ body{
     color: white;
     position: absolute;   /* body ke respect me */
      
-}
+} 
   
  #speechtotext
-
- {
-    display: none;
+ {display: none;
      color:black;
-     background-color: white;
-     
- } 
-  #cleartext {
-     display: none;
-     
-    
-
-  }
+     background-color: white; } 
+ 
+ #cleartext {
+     display: none; }
 #voice
 {
  width:150px;
