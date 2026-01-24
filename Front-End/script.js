@@ -237,7 +237,7 @@ async function generateResponse(aichatbox)
     
   console.log("full response" , data);
    if (!data.candidates) {
-      return "⚠️ API limit reached,try again after sometime.";
+      return "API limit reached,try again after sometime.";
     }
 
    let aitext= data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g,"$1").trim(); 
@@ -349,6 +349,7 @@ button(); */
 }
 
    });
+
 
 
 
