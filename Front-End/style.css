@@ -21,7 +21,7 @@
 body{
     display: flex;
     flex-direction: column;
-    background-image: url('ai11.image.png');
+    background-image: url('a12.image.png');
   overflow: hidden;
     
 
@@ -115,3 +115,4 @@ bottom:10;
 #ai-image
 {
  width:30px; }
+
