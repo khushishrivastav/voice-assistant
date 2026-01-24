@@ -1,14 +1,28 @@
+#scrollarea
+{ overflow-y: auto;}
+
+
+
+
 .container{
+    margin-top: 150px;
     background-color: rgba(0,0,0,0.8);
     border-radius: 20px;
     padding: 40px;
     color: white;
-    position: absolute;   /* body ke respect me */
+   // position: absolute;   /* body ke respect me */
+    display : flex;
+    flex-direction: column;
+    align-items: center;           /* vertical center */
+  justify-content: center;       /* horizontal center */
     }
-
+ #one
+{ display : flex;}
 body{
     display: flex;
-    background-image: url('ai.image.png');
+    flex-direction: column;
+    background-image: url('ai11.image.png');
+  overflow: hidden;
     
 
     background-size: cover;   /* image ko poore screen pe fit karega */
@@ -17,8 +31,8 @@ body{
   height: 100vh; /* pura screen ki height lega */
   margin: 0; /* extra margin hatane ke liye */
 
-  justify-content: center;  /* horizontal center */
-  align-items: center;      /* vertical center */
+//  justify-content: center;  /* horizontal center */
+//  align-items: center;      /* vertical center */
 
   } 
 
@@ -45,3 +59,59 @@ body{
  width:150px;
  display:none;
 }
+
+#chat-container
+{
+ display:none; }
+
+#user-chatarea
+{
+ background-color: black;
+ color: white;
+ 
+ margin-left:auto;
+font-size:20px;
+width:50%;
+border-radius:20px;
+  word-wrap: break-word;  /* long text wrap hoga */
+ gap:20px;
+display:flex;
+}
+
+#aichatarea
+{
+ background-color: rgba(0,0,0,0.20);
+ color: white;
+  display:flex;
+margin-right:auto;
+font-size:20px;
+border-radius:20px;
+width:50%;
+gap:20px;
+}
+
+/* #prompt-area
+{
+ width:100%;
+ height 20%;
+align-items:center;
+justify-content:center;
+gap:10px;
+display:flex;
+
+bottom:10;
+
+} */
+#imagess
+{
+ width:30px; }
+#arrow
+{ width:30px; }
+
+#user-image
+{
+ width:30px;
+ }
+#ai-image
+{
+ width:30px; }
