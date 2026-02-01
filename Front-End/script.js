@@ -129,8 +129,11 @@ else if(command.includes("time"))
     //   { speak("sorry i can only open notepad , Mspaint , Excel, MSword, whatsapp, instagram, youtube , facebook and calulator ");}
       
        else 
-       { speak(`this is what i found on internet regarding ${command}`);
+       { if(command.includes !== "how can i help you")
+       {
+        speak(`this is what i found on internet regarding ${command}`);
          window.open(`https://www.google.com/search?q=${command}`);
+       }
 } }
     
       if(!wished)
@@ -352,6 +355,7 @@ button(); */
 }
 
    });
+
 
 
 
