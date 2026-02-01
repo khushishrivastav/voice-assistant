@@ -202,6 +202,9 @@ const c3=" upPlZad75tJc";
 
 function generate()
 { return a1+b2+c3;}
+//const api_url ="https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + api_key;
+//const api_url ="https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
+//const api_key= "AIzaSyA3VZ-EsZr6tBAvmtdbFv6upPlZad75tJc";
 
 key=generate();
 
@@ -320,7 +323,7 @@ button(); */
    //value=false;
  
     var img2= document.createElement("img");
-   img2.src="a13.image.png";
+   img2.src="a12.image.png";
    
    img2.style.width="30px";
    
@@ -349,10 +352,4 @@ button(); */
 }
 
    });
-
-
-
-
-
-
 
