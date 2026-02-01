@@ -6,28 +6,7 @@ let btn= document.getElementById("btn");
 let voice=document.getElementById("voice");
 let wished=false;
 btn.addEventListener("click",()=>
-{  
-  let isSpeaking = false;
-
-function speak(text) {
-  recognition.stop();           // 🎯 mic band
-  isSpeaking = true;
-
-  const abc = new SpeechSynthesisUtterance(text);
-  abc.lang = "hi-GB";
-  abc.volume = 1;
-  abc.pitch = 1;
-  abc.rate = 1;
-
-  abc.onend = () => {
-    isSpeaking = false;
-    recognition.start();        // 🎯 mic wapas on
-  };
-
- /* window.speechSynthesis.speak(abc);
-}
-
-  function speak(text) {
+{function speak(text) {
   const abc = new SpeechSynthesisUtterance(text); //convert text to speech and voice
 
   abc.lang="hi-GB";
@@ -36,7 +15,7 @@ function speak(text) {
   abc.rate = 1;
 
   window.speechSynthesis.speak(abc);
-} */
+}
 
       function handleCommands(command)
       {
@@ -183,18 +162,11 @@ else if(command.includes("time"))
          voice.style.display="block";
       }, 2000);
       
-            recognition.onresult = (event) => {
-  if (isSpeaking) return;   // 🔒 apni awaaz ignore
-
-  const command = event.results[0][0].transcript.toLowerCase();
-  handleCommands(command);
-};
-
-/* recognition.onresult = (event) => {
-   const command = event.results[0][0].transcript.toLowerCase();
+            
+recognition.onresult = (event) => {
+    const command = event.results[0][0].transcript.toLowerCase();
     handleCommands(command)
-  };  */
-  
+  };
 }
 );
 
